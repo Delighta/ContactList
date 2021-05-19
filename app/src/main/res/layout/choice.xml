@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    tools:context=".ChoiceActivity"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:background="@color/purple_200"-->
+
+<!--    >-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/family"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginRight="25dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="50sp"-->
+<!--        android:text="Family"-->
+<!--        android:onClick="choiceAction"-->
+<!--        style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/friend"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        app:layout_goneMarginTop="16dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="50sp"-->
+<!--        android:text="Friend"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/family"-->
+<!--        app:layout_constraintStart_toStartOf="@id/family"-->
+<!--        android:onClick="choiceAction"-->
+<!--        />-->
+<!--    <TextView-->
+<!--        android:id="@+id/work"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/friend"-->
+<!--        style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"-->
+<!--        app:layout_constraintStart_toStartOf="@id/friend"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="50sp"-->
+<!--        android:text="Work"-->
+<!--        android:onClick="choiceAction"-->
+<!--        />-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".ChoiceActivity"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/purple_700">
+
+    <LinearLayout
+    android:orientation = "vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:textSize="35sp"
+                    android:text="Contactlist Category"
+                    android:textStyle="bold"
+                    android:textColor="@color/white">
+
+                </TextView>
+
+
+        </RelativeLayout>
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:columnOrderPreserved="false"
+                        android:alignmentMode="alignMargins"
+                        android:rowCount="2"
+                        android:columnCount="2">
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:layout_rowWeight="1"
+                                android:elevation="60dp"
+                                app:cardCornerRadius="12dp"
+                                android:layout_margin="12dp">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:padding="16dp"
+                                        android:orientation="vertical"
+                                        android:layout_margin="15dp"
+                                        android:layout_marginLeft="30dp"
+                                        android:layout_marginRight="20dp"
+                                        android:onClick="choiceAction"
+                                        >
+                                            <ImageView
+                                                android:layout_width="80dp"
+                                                android:layout_height="80dp"
+                                                android:src="@drawable/family"/>
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Family"
+                                                    android:layout_marginTop="16dp"
+                                                    android:textSize="18sp"
+                                                    android:textColor="@color/black"
+
+                                                    />
+
+                                    </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_rowWeight="1"
+                            android:elevation="60dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_margin="12dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_margin="15dp"
+                                android:padding="16dp"
+                                android:orientation="vertical"
+                                android:onClick="choiceAction"
+                                >
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/friends"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Friend"
+                                    android:layout_marginTop="16dp"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/black"
+                                    />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_rowWeight="1"
+                            android:elevation="60dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_margin="12dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:padding="16dp"
+                                android:layout_margin="15dp"
+                                android:orientation="vertical"
+                                android:onClick="choiceAction"
+                                >
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/work"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Work"
+                                    android:layout_marginTop="16dp"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/black"
+                                    />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_rowWeight="1"
+                            android:elevation="60dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_margin="12dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:padding="16dp"
+                                android:layout_margin="15dp"
+                                android:orientation="vertical"
+                                android:onClick="choiceAction"
+                                >
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/school"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="School"
+                                    android:layout_marginTop="16dp"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/black"
+                                    />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </GridLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>
